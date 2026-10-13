@@ -58,7 +58,7 @@
 
   /* list rows */
   .list{list-style:none}
-  .list li{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .list li{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
   .list .m{font-family:var(--display);font-weight:900;font-size:22px;line-height:1.1}
   .list b{display:block;font-weight:700;font-size:16.5px;line-height:1.35;margin-bottom:2px}
   .list span.d{color:var(--muted);font-size:15px}
@@ -119,6 +119,10 @@
       <li><span class="m">5</span><div><b data-i18n="do5">Push the Affiliate Collective program</b><span class="d" data-i18n="do5d">Promote Marblism's multi-level affiliate program and grow it.</span></div></li>
       <li><span class="m">6</span><div><b data-i18n="do6">Move digital PR and activations</b><span class="d" data-i18n="do6d">Coordinate podcasts and media outlet interviews.</span></div></li>
       <li><span class="m">7</span><div><b data-i18n="do7">Represent Marblism</b><span class="d" data-i18n="do7d">With good copywriting and professionalism, always.</span></div></li>
+      <li><span class="m">8</span><div><b data-i18n="do8">Own new initiatives</b><span class="d" data-i18n="do8d">For example, a 10,000-person webinar backed by paid ads, built to convert every attendee it can.</span></div></li>
+      <li><span class="m">9</span><div><b data-i18n="do9">Open and grow new communities</b><span class="d" data-i18n="do9d">New groups on platforms like Skool and Reddit. Spend real time there and develop them with the marketing team.</span></div></li>
+      <li><span class="m">10</span><div><b data-i18n="do10">Make the creative, hands on</b><span class="d" data-i18n="do10d">Use design tools like Higgsfield, Claude and Sonny from Marblism to cook the right creative for the community.</span></div></li>
+      <li><span class="m">11</span><div><b data-i18n="do11">Own email communications to partners</b><span class="d" data-i18n="do11d">Coordinate with the marketing team so every partner email is clear.</span></div></li>
     </ul>
   </section>
 
@@ -146,6 +150,8 @@
       <li><span class="m">&times;</span><div><b data-i18n="no4">Unclear communication with stakeholders</b><span class="d" data-i18n="no4d">Everyone should know what happened and what's next.</span></div></li>
       <li><span class="m">&times;</span><div><b data-i18n="no5">Not doing everything in your power to hit the goal</b><span class="d" data-i18n="no5d">Whatever it takes, within your reach.</span></div></li>
       <li><span class="m">&times;</span><div><b data-i18n="no6">Being the bottleneck</b><span class="d" data-i18n="no6d">If we are the bottleneck, do everything in your power to remove it.</span></div></li>
+      <li><span class="m">&times;</span><div><b data-i18n="no7">Saying or promising things to partners without verifying first</b><span class="d" data-i18n="no7d">If you are not sure it's true, check before you say it.</span></div></li>
+      <li><span class="m">&times;</span><div><b data-i18n="no8">Upsetting partners constantly</b><span class="d" data-i18n="no8d">Partners are the program. Treat every interaction that way.</span></div></li>
     </ul>
   </section>
 
@@ -183,6 +189,12 @@ const ES = {
   no4:"Comunicación poco clara con stakeholders", no4d:"Todos deben saber qué pasó y qué sigue.",
   no5:"No hacer todo lo que está en tu poder para llegar a la meta", no5d:"Lo que sea necesario, dentro de tu alcance.",
   no6:"Ser el cuello de botella", no6d:"Si somos el cuello de botella, hacer todo lo posible por quitarlo.",
+  do8:"Liderar iniciativas nuevas", do8d:"Por ejemplo, un webinar de 10,000 personas con presupuesto en ads, armado para convertir a todos los asistentes que se pueda.",
+  do9:"Abrir y crecer comunidades nuevas", do9d:"Grupos nuevos en plataformas como Skool y Reddit. Dedicarles tiempo real y desarrollarlos con el equipo de marketing.",
+  do10:"Hacer el creativo, hands on", do10d:"Usar herramientas de diseño como Higgsfield, Claude y Sonny de Marblism para cocinar el creativo correcto para la comunidad.",
+  do11:"Llevar los emails a partners", do11d:"Coordinar con el equipo de marketing para que cada email a partners sea claro.",
+  no7:"Decir o prometer cosas a los partners sin verificar primero", no7d:"Si no estás seguro de que es cierto, confírmalo antes de decirlo.",
+  no8:"Hacer enojar a los partners constantemente", no8d:"Los partners son el programa. Trata cada interacción así.",
   foot:"Head of Partnership Development · 2026"
 };
 const nodes = document.querySelectorAll("[data-i18n]");
