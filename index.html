@@ -127,6 +127,19 @@
   .trait b{display:block;font-weight:700;margin-bottom:2px}
   .trait span{font-size:14px;color:var(--muted)}
 
+
+  /* red flags */
+  .flags{border:1px solid var(--ink)}
+  .flag{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+  .flag:first-child{border-top:0}
+  .flag .no,.flag .yes{padding:16px 18px;display:flex;gap:12px;font-size:14.5px;line-height:1.5}
+  .flag .no{background:var(--ink);color:var(--paper)}
+  .flag .yes{border-left:1px solid var(--ink)}
+  .flag .m{font-family:var(--display);font-weight:900;font-size:18px;line-height:1.2;flex:none;width:18px}
+  .flag .no .m{color:var(--yellow)}
+  .flags-head{display:grid;grid-template-columns:1fr 1fr;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:8px}
+  .flags-head span:last-child{padding-left:18px}
+
   footer{border-top:1px solid var(--ink);padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
   footer img{height:18px}
 
@@ -149,6 +162,9 @@
     .kpi:first-child{border-top:0}
     .trait:nth-child(even){padding-left:0;border-left:0}
     .mission{padding:26px 20px}
+    .flag{grid-template-columns:1fr}
+    .flag .yes{border-left:0}
+    .flags-head{display:none}
   }
 </style>
 </head>
@@ -311,6 +327,21 @@
     </div>
   </section>
 
+  <section class="rev">
+    <div class="eyebrow" data-i18n="e7">What we don't accept</div>
+    <h2 data-i18n="h7">Red flags</h2>
+    <p class="lead" data-i18n="l7">This role is the voice of Marblism with partners. These are the things we flag right away, and what we expect instead.</p>
+    <div class="flags-head"><span data-i18n="fh1">Red flag</span><span data-i18n="fh2">What we expect</span></div>
+    <div class="flags">
+      <div class="flag"><div class="no"><span class="m">&times;</span><span data-i18n="rf1">Bad communication between our Slack channels and clients.</span></div><div class="yes"><span class="m">&check;</span><span data-i18n="ok1">Clients and Slack stay in sync. Nobody hears news from a partner first.</span></div></div>
+      <div class="flag"><div class="no"><span class="m">&times;</span><span data-i18n="rf2">Misspellings, typos and phrases that make no sense.</span></div><div class="yes"><span class="m">&check;</span><span data-i18n="ok2">Every message is proofread before it goes out. It represents Marblism.</span></div></div>
+      <div class="flag"><div class="no"><span class="m">&times;</span><span data-i18n="rf3">Sending to support what you can own yourself.</span></div><div class="yes"><span class="m">&check;</span><span data-i18n="ok3">If you can solve it, you solve it. Support is for what truly needs them.</span></div></div>
+      <div class="flag"><div class="no"><span class="m">&times;</span><span data-i18n="rf4">Stakeholders left guessing.</span></div><div class="yes"><span class="m">&check;</span><span data-i18n="ok4">Clear, proactive updates to every stakeholder: what happened, what's next, when.</span></div></div>
+      <div class="flag"><div class="no"><span class="m">&times;</span><span data-i18n="rf5">Stopping at “I tried”.</span></div><div class="yes"><span class="m">&check;</span><span data-i18n="ok5">Do whatever is in your power to hit the goal.</span></div></div>
+      <div class="flag"><div class="no"><span class="m">&times;</span><span data-i18n="rf6">Being the bottleneck.</span></div><div class="yes"><span class="m">&check;</span><span data-i18n="ok6">If we are the bottleneck, do everything in your power to remove it.</span></div></div>
+    </div>
+  </section>
+
   <footer>
     <img src="images/marblism-logo.png" alt="Marblism">
     <span data-i18n="foot">Head of Partnership Development · Role brief · 2026</span>
@@ -378,6 +409,15 @@ const I18N = {
     q2:"Gran escritor", q2d:"Posts, invitaciones y pitches que suenan a Marblism: claros, seguros, profesionales.",
     q3:"Organizado", q3d:"Webinars, eventos y entrevistas salen a tiempo, siempre.",
     q4:"Se adapta rápido", q4d:"Aprendes el programa rápido y cambias el plan cuando los números lo piden.",
+    e7:"Lo que no aceptamos", h7:"Red flags",
+    l7:"Este rol es la voz de Marblism con los partners. Esto es lo que señalamos de inmediato, y lo que esperamos en su lugar.",
+    fh1:"Red flag", fh2:"Lo que esperamos",
+    rf1:"Mala comunicación entre nuestros canales de Slack y los clientes.", ok1:"Clientes y Slack siempre en sync. Nadie se entera de algo primero por un partner.",
+    rf2:"Faltas de ortografía, typos y frases sin sentido.", ok2:"Cada mensaje se revisa antes de salir. Representa a Marblism.",
+    rf3:"Mandar a soporte lo que puedes resolver tú.", ok3:"Si lo puedes resolver, lo resuelves. Soporte es para lo que de verdad lo necesita.",
+    rf4:"Stakeholders adivinando qué pasa.", ok4:"Updates claros y proactivos a cada stakeholder: qué pasó, qué sigue, cuándo.",
+    rf5:"Quedarse en “lo intenté”.", ok5:"Hacer todo lo que esté en tu poder para llegar a la meta.",
+    rf6:"Ser el cuello de botella.", ok6:"Si somos el cuello de botella, hacer todo lo posible por quitarlo.",
     foot:"Head of Partnership Development · Descripción del rol · 2026"
   }
 };
